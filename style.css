@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+
+/************* Header ****************/
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 80px;
+    z-index: 7;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #111;
+}
+
+/******* Navigation Bar ********/
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 10px 18px;
+    position: relative;
+}
+
+#navbar li a,
+#navbar li a.active {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    transition: 0.5s ease;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after { 
+    content: " ";
+    width: 55px;
+    height: 2.5px;
+    align-items: center;
+    background-color: red;
+    position: absolute;
+    bottom: -1px;
+    left: 20px;
+}
+
+
+/************ Hero Section ***********/
+
+.developer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 80px;
+    margin-bottom: 80px;
+}
+
+#hero-text {
+    margin-right: 40px;
+} 
+
+#hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 3.5px;
+}
+
+#hero-text h1 span {
+    color: red;
+    font-size: 55px;
+    font-weight: 7500;
+}
+
+#hero-text h4 {
+    padding-bottom: 3px;
+    font-weight: 700;
+}
+
+#hero img {
+    border-radius: 50%; 
+    background-size: cover;
+    box-shadow: 0px 10px 20px rgba(58, 58, 58, 0.8);
+    width: 500px;
+    height: 500px
+}   
+
+
+/**************** About Section ****************/
+
+#about {
+    padding: 80px 80px;
+    margin-bottom: 40px;
+}
+
+#about img {
+    border-radius: 15%; 
+    object-fit: cover; 
+    margin-right: 50px;
+    width: 200%;
+    height: 400px
+}
+
+.section-heading {
+    font-size: 50px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+#about p {
+    font-size: px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+
+/***************** Project Section ******************/
+
+#projects {
+    padding: 80px 80px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#project-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/******** Project Card ******/
+.project-card {
+    width: 350px;
+    height: 500px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #d3d3d3;
+}
+
+.project-card .project-link {
+    display: inline-block;
+    text-decoration: none;
+    color: red;
+    background-color: rgb(245, 217, 217);
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    background-color: red;
+    color: white;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    background-color: rgb(29, 28, 28);
+}
+
+
+/******** Contact Section **********/
+
+#contact {
+    padding: 80px 80px;
+    text-align: center;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#contact-form input {
+    margin: 10px 20px;
+    padding: 10px 10px;
+    width: 550px;
+    height: 40px;
+    background-color: rgb(29, 28, 28);
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#contact-form input:hover {
+    background-color: white;
+    color: black;
+}
+
+#contact-form input::after {
+    background-color: white;
+    color: black;
+}
+
+#contact-form .message {
+    padding-top: 10px;
+    padding-bottom: 120px;
+    height: 150px;
+}
+
+#contact-form button {
+    background-color: white;
+    color: red;
+    padding: 8px 20px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    font-weight: 800;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: red;
+    color: white;
+}
+
+
+/************ Footer Section *************/
+#footer {
+    background-color: #111; 
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/************* Social Media Icons ************/
+.social-media a {
+    text-decoration: none;
+    font-size: 30px; 
+    margin: 0 10px; 
+    transition: color 0.3s ease;
+}
+
+.social-media a i.fab.fa-instagram {
+    color: #E1306C; 
+}
+
+.social-media a i.fab.fa-linkedin {
+    color: #0077B5;
+}
+
+.social-media a i.fab.fa-twitter {
+    color: #1DA1F2; 
+}
+
+.social-media a i.fab.fa-facebook {
+    color: #1877F2; 
+}
+
+
+/******** Explicitly setting Hover Effect on each icon ************/
+
+.social-media a i.fab.fa-instagram:hover {
+    color: red; 
+    font-size: 40px;
+    transform: translateY(-2px);
+}
+
+.social-media a i.fab.fa-linkedin:hover {
+    color: red; 
+    font-size: 40px;
+    transform: translateY(-2px);
+}
+.social-media a i.fab.fa-twitter:hover {
+    color: red; 
+    font-size: 40px;
+    transform: translateY(-2px);
+}
+
+.social-media a i.fab.fa-facebook:hover {
+    color: red; 
+    font-size: 40px;
+    transform: translateY(-2px);
+}
+
+
+/************ Copyright Section **********/
+
+#footer p {
+    color: white;
+    margin: 10px 10px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
